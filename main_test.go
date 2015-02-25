@@ -15,7 +15,14 @@ func TestString(t *testing.T) {
 
 func TestNumber(t *testing.T) {
 	n := lib.Number()
-	if e := 1; e != 1 {
+	if e := 1; e != n {
+		t.Errorf("Mismatch! got: %d wanted: %d", n, e)
+	}
+}
+
+func TestConverted(t *testing.T) {
+	n := lib.Converted()
+	if e := 2; e != n {
 		t.Errorf("Mismatch! got: %d wanted: %d", n, e)
 	}
 }
